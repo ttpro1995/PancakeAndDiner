@@ -17,6 +17,10 @@ Waitress::~Waitress()
 void ::Waitress::printMenu()
 {
 	Iterator* DinerIterator = diner.createIterator();
+	Iterator* PancakeIterator = pancake.createIterator();
+	cout << "Breakfast :\n";
+	printMenu(PancakeIterator);
+	cout << endl << endl;
 	cout << "lunch : \n";
 	printMenu(DinerIterator);
 }

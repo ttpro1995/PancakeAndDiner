@@ -1,7 +1,7 @@
 #include "PancakeHouseMenu.h"
 #include <string>
 using namespace std;
-
+#include "PancakeIterator.h"
 PancakeHouseMenu::PancakeHouseMenu()
 {
 
@@ -42,3 +42,7 @@ vector<MenuItem> PancakeHouseMenu::getMenuItems()
 {
 	return menu;
 }
+
+Iterator* PancakeHouseMenu::createIterator(){
+	return new PancakeIterator(menu);
+};
