@@ -12,6 +12,10 @@ MenuItem::MenuItem(string name,
 	this->vegetarian = vegetarian;
 	this->price = price;
 }
+MenuItem::MenuItem()
+{
+
+}
 
 string MenuItem::getName() {
 	return name;
@@ -29,3 +33,4 @@ bool MenuItem::isVegetarian() {
 MenuItem::~MenuItem()
 {
 }
+

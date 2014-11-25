@@ -2,9 +2,10 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+#include "DinerMenuIterator.h"
 DinerMenu::DinerMenu()
 {
+	menu = new MenuItem[MAX_ITEMS];
 	addItem("Vegetarian BLT",
 		"(Fakin’) Bacon with lettuce & tomato on whole wheat", true, 2.99);
 	addItem("BLT",
@@ -16,6 +17,33 @@ DinerMenu::DinerMenu()
 		false, 3.05);
 }
 
+DinerMenu::DinerMenu(const DinerMenu& MM)
+{
+	MAX_ITEMS = MM.MAX_ITEMS;
+	numberOfItems = MM.numberOfItems;
+	menu = new MenuItem[MAX_ITEMS];
+	for (int i = 0; i < numberOfItems; i++)
+	{
+		menu[i] = MM.menu[i];
+	}
+	
+}
+
+DinerMenu& DinerMenu::operator=(const DinerMenu& MM)
+{
+	if (this == &MM)
+	{
+		return *this;
+	}
+	MAX_ITEMS = MM.MAX_ITEMS;
+	numberOfItems = MM.numberOfItems;
+	menu = new MenuItem[MAX_ITEMS];
+	for (int i = 0; i < numberOfItems; i++)
+	{
+		menu[i] = MM.menu[i];
+	}
+	return *this;
+}
 
 DinerMenu::~DinerMenu()
 {
@@ -35,8 +63,16 @@ void DinerMenu::addItem(string name, string description,
 	}
 }
 
-MenuItem* DinerMenu::getMenuItem()
-{
+//
+//MenuItem* DinerMenu::getMenuItem()
+//{
+//
+//	return menu;
+//}
 
-	return menu;
+Iterator* DinerMenu::createIterator()
+{
+	return new DinerMenuIterator(menu,numberOfItems);
 }
+
+

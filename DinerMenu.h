@@ -1,5 +1,6 @@
 #pragma once
 #include "MenuItem.h"
+#include "DinerMenuIterator.h"
 #include <string>
 using namespace std;
 class DinerMenu
@@ -10,8 +11,11 @@ private:
 	MenuItem* menu;
 public:
 	DinerMenu();
+	DinerMenu(const DinerMenu&);
+	DinerMenu& operator=(const DinerMenu&);
 	~DinerMenu();
 	void addItem(string name, string description, bool vegetarian, double price);
 	MenuItem* getMenuItem();
+	Iterator* createIterator();
 };
 

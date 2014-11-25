@@ -1,12 +1,14 @@
 #include <iostream>
 #include "PancakeHouseMenu.h"
 #include "DinerMenu.h"
-
+#include "Waitress.h"
 using namespace std;
 
 int main()
 {
-	PancakeHouseMenu test;
-	cout << "hello world \n";
-
+	DinerMenu diner;
+	PancakeHouseMenu pancake;
+	Waitress Alice(diner,pancake);
+	Alice.printMenu();
+	
 }
