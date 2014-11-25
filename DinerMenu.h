@@ -15,7 +15,7 @@ public:
 	DinerMenu& operator=(const DinerMenu&);
 	~DinerMenu();
 	void addItem(string name, string description, bool vegetarian, double price);
-	MenuItem* getMenuItem();
+	//MenuItem* getMenuItem();  not need this because we use Iterator
 	Iterator* createIterator();
 };
 
