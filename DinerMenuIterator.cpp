@@ -1,3 +1,4 @@
+//CS202 - Group 9 - APCS 13ctt Pancake and Diner a example of iterator
 #include "DinerMenuIterator.h"
 #include <iostream>
 #include "MenuItem.h"

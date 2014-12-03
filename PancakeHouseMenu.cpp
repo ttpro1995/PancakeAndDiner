@@ -1,3 +1,4 @@
+//CS202 - Group 9 - APCS 13ctt Pancake and Diner a example of iterator
 #include "PancakeHouseMenu.h"
 #include <string>
 using namespace std;
@@ -6,7 +7,7 @@ PancakeHouseMenu::PancakeHouseMenu()
 {
 
 	
-	addItem("K&B’s Pancake Breakfast",
+	addItem("K and B 's Pancake Breakfast",
 		"Pancakes with scrambled eggs, and toast",
 		true,
 		2.99);
