@@ -6,6 +6,8 @@ using namespace std;
 #include "DinerMenuIterator.h"
 DinerMenu::DinerMenu()
 {
+	 MAX_ITEMS = 6;
+	 numberOfItems = 0;
 	menu = new MenuItem[MAX_ITEMS];
 	addItem("Vegetarian BLT",
 		"(Fakin’) Bacon with lettuce & tomato on whole wheat", true, 2.99);

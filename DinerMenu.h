@@ -7,8 +7,8 @@ using namespace std;
 class DinerMenu
 {
 private:
-	int MAX_ITEMS=6;//c++11
-	int  numberOfItems = 0;//c++11
+	int MAX_ITEMS;
+	int  numberOfItems;
 	MenuItem* menu;
 public:
 	DinerMenu();
